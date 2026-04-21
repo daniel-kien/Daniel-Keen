@@ -1,0 +1,30 @@
+scores = [78, 85, 92, 67, 45, 88, 73, 59, 91, 62]
+
+total = 0
+highest = scores[0]
+lowest = scores[0]
+passing_count = 0
+above_80 = 0
+
+for score in scores:
+    total += score
+
+    if score > highest:
+        highest = score
+
+    if score < lowest:
+        lowest = score
+
+    if score >= 50:
+        passing_count += 1
+
+    if score > 80:
+        above_80 += 1
+
+average = total / len(scores)
+
+print("Average:", round(average, 1))
+print("Highest:", highest)
+print("Lowest:", lowest)
+print("Passing count:", passing_count)
+print("Above 80:", above_80)
